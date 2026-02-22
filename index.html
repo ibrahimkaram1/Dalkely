@@ -9,6 +9,7 @@
         content="استعيد صحتك وحركتك مع خبرتنا في العلاج الطبيعي. دكتور إبراهيم كرم عطية أحمد، خدمات علاج يدوي، كهربائي وإعادة تأهيل.">
 
     <!-- Google Fonts -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,21 +20,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom CSS -->
+     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
-    <!-- Header / Navbar -->
-<nav id="navbar">
+<body><nav id="navbar">
     <div class="container">
         <!-- Logo -->
-        <a href="#" class="logo">
-            <i class="fas fa-clinic-medical"></i> Dalkely
-        </a>
+        <a href="#" class="logo">Dalkely</a>
 
-        <!-- Links -->
-        <ul class="nav-links">
+        <!-- Menu toggle for mobile -->
+        <div id="menuToggle" class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Nav links -->
+        <ul id="navLinks" class="nav-links">
             <li><a href="#home">الرئيسية</a></li>
             <li><a href="#about">عن الدكتور</a></li>
             <li><a href="#services">الخدمات</a></li>
@@ -41,12 +43,11 @@
             <li><a href="#contact">تواصل معنا</a></li>
         </ul>
 
-        <!-- Call to action button -->
-        <a href="#booking" class="btn btn-primary">
-            <i class="fas fa-calendar-check"></i> احجز الآن
-        </a>
+        <!-- CTA Button -->
+        <a href="#booking" class="btn btn-primary nav-btn">احجز الآن</a>
     </div>
 </nav>
+
 
     <!-- Hero Section -->
     <section class="hero" id="home">
