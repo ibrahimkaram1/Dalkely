@@ -485,3 +485,133 @@ footer {
     .hero { text-align: center; }
     .hero-btns { justify-content: center; }
 }
+/* =========================
+   NAVBAR FIX & MOBILE MENU
+========================= */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+/* Space under navbar */
+body {
+    padding-top: 90px;
+}
+
+/* Container layout */
+#navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Menu toggle animation */
+.menu-toggle i {
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Change icon from bars to X */
+
+.menu-toggle {
+    position: relative;
+    z-index: 10001; /* أعلى من navbar نفسه */
+    cursor: pointer;
+}
+.menu-toggle {
+    pointer-events: auto !important;
+}
+
+/* Nav links desktop */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 600;
+}
+
+/* CTA button desktop */
+.nav-btn {
+    margin-right: 20px;
+}
+
+/* ============ MOBILE ============ */
+@media (max-width: 768px) {
+
+    #navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        background: #ffffff;
+        margin-top: 20px;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+/* ============ MOBILE ============ */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block; /* 👈 ده كان ناقص */
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: #ffffff;
+        margin-top: 20px;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+        text-align: center;
+    }
+}
